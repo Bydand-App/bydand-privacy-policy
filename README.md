@@ -1,1 +1,1 @@
-# bydand-privacy-policy 
+# bydand-privacy-policy  
