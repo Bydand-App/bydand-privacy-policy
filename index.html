@@ -3,156 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bydand: Household &amp; Emergency — Privacy Policy</title>
-
-<!-- Favicons -->
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="favicon-192.png">
-
+<title>Bydand: Household Contacts — Privacy Policy</title>
+<link rel="icon" type="image/png" href="favicon-192.png">
 <style>
-    /* Splash Screen Styling */
-    #splash-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        transition: opacity 0.8s ease, visibility 0.8s ease;
-        overflow: hidden;
-    }
-
-    #splash-logo {
-        width: 85vw;
-        max-width: 550px;
-        height: auto;
-        object-fit: contain;
-        /* Strictly linear forward zoom animation, matched to the 1.4s display time below */
-        animation: smoothForwardZoom 1.4s linear forwards;
-    }
-
-    /* Grows continuously forward without any bounce or contraction */
-    @keyframes smoothForwardZoom {
-        0% {
-            transform: scale(0.65);
-            opacity: 0.3;
-        }
-        100% {
-            transform: scale(1.15);
-            opacity: 1;
-        }
-    }
-
-    #splash-screen.fade-out {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    /* Webpage Content Styling */
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 40px 24px 80px;
-        color: #1a1a1a;
-        line-height: 1.6;
-        background: #ffffff;
-    }
-    header {
-        border-bottom: 3px solid #081537;
-        padding-bottom: 20px;
-        margin-bottom: 32px;
-    }
-    h1 {
-        color: #081537;
-        margin: 0 0 6px;
-        font-size: 1.9rem;
-    }
-    .updated {
-        color: #666;
-        font-size: 0.9rem;
-    }
-    h2 {
-        color: #081537;
-        font-size: 1.25rem;
-        margin-top: 36px;
-        border-left: 4px solid #e14f4f;
-        padding-left: 12px;
-    }
-    p, li {
-        font-size: 1rem;
-        color: #222;
-    }
-    ul {
-        padding-left: 22px;
-    }
-    .highlight-box {
-        background: #f4f7fb;
-        border: 1px solid #d8e0ec;
-        border-radius: 10px;
-        padding: 18px 20px;
-        margin: 24px 0;
-    }
-    .highlight-box p {
-        margin: 0;
-    }
-    footer {
-        margin-top: 56px;
-        padding-top: 20px;
-        border-top: 1px solid #ddd;
-        color: #777;
-        font-size: 0.85rem;
-    }
-    a { color: #1a4fa0; }
+  :root { color-scheme: light dark; --bg:#ffffff; --fg:#14202b; --muted:#506172; --accent:#0f766e; --rule:#d7dee6; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0a0e15; --fg:#e8eef4; --muted:#9aa9b9; --accent:#2dd4bf; --rule:#1c2a3a; } }
+  html { background: var(--bg); }
+  body { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; background: var(--bg); color: var(--fg);
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  img.logo { width: 72px; height: 72px; border-radius: 16px; display: block; margin: 0 0 16px; }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--accent); }
+  p, li { margin: .5rem 0; }
+  ul { padding-left: 1.3rem; }
+  .updated { color: var(--muted); margin: 0 0 1.2rem; }
+  .callout { border-left: 4px solid var(--accent); padding: .6rem 1rem; margin: 1rem 0; background: color-mix(in srgb, var(--accent) 8%, transparent); }
+  a { color: var(--accent); }
+  footer { margin-top: 2.5rem; color: var(--muted); font-size: .9rem; }
 </style>
-<noscript><style>#splash-screen { display: none; }</style></noscript>
 </head>
 <body>
 
-<!-- Splash Screen Overlay -->
-<div id="splash-screen">
-    <img src="favicon-192.png" alt="Bydand Logo" id="splash-logo">
-</div>
+<img class="logo" src="favicon-192.png" alt="Bydand logo">
+<h1>Bydand: Household Contacts — Privacy Policy</h1>
+<p class="updated">Last updated: October 22, 2026</p>
 
-<header>
-    <h1>Bydand: Household &amp; Emergency — Privacy Policy</h1>
-    <div class="updated">Last updated: October 20, 2026</div>
-</header>
-
-<div class="highlight-box">
-    <p><strong>In short: your information stays on your device.</strong> Bydand does not have a server, does not collect your data, and does not share your data with anyone — because there is nowhere for that data to go except the phone you typed it into. The only times the app contacts anyone else are a few features you choose to tap, listed under “Location, maps, and text scanning” below.</p>
-</div>
+<p class="callout"><strong>In short: your information stays on your device.</strong> Bydand does not have a server, does not collect your data, and does not share your data with anyone, because there is nowhere for that data to go except the phone you typed it into. The only times the app reaches outside your phone are a few things you choose to tap, listed under “Links, calls, texts, and text scanning” below.</p>
 
 <h2>What information the app handles</h2>
-<p>Bydand is a personal reference app for household, medical, and emergency-contact information. Depending on how you choose to use it, the app may store information you enter yourself, such as:</p>
+<p>Bydand is a personal organizer for household contacts and essentials. Depending on how you choose to use it, the app may store information you enter yourself, such as:</p>
 <ul>
-    <li>Emergency contacts and their phone numbers</li>
-    <li>Medical ID details (such as blood type, allergies, medications)</li>
-    <li>Insurance policy details (homeowners, auto, and other policies)</li>
-    <li>Utility company accounts and service-shutoff locations</li>
-    <li>School information (school name, grade, teacher, and contact details), if you choose to enter it</li>
-    <li>Photos you choose to attach (for example, a photo of an insurance card, a shutoff valve, or a utility bill)</li>
-    <li>Notes you add to any of the above</li>
+  <li>Household contacts: names, relationships, phone numbers, and email addresses</li>
+  <li>Insurance policy details (home, auto, boat, travel, and pet) and vehicle, home, and pet service details</li>
+  <li>Utility company accounts and service-shutoff locations</li>
+  <li>School information (school name, grade, teacher, and contact details), if you choose to enter it</li>
+  <li>An optional household name and home address, used only to print on your Household Contact Card</li>
+  <li>Photos you choose to attach (for example, a photo of an insurance card, a shutoff valve, or a utility bill)</li>
+  <li>Notes you add to any of the above</li>
 </ul>
 
 <h2>Where this information is stored</h2>
-<p>All information you enter is stored locally on your device only, using your device's own local storage. Bydand does not operate a server or cloud database, and the information you enter is not transmitted by the app, apart from the few features you choose to tap that are described under “Location, maps, and text scanning” below. The app is also set to opt out of Android's automatic app backup, so its contents are not copied to a cloud backup by the app.</p>
+<p>All information you enter is stored locally on your device only, using your device's own local storage. Bydand does not operate a server or cloud database, and the information you enter is not transmitted by the app, apart from the few features you choose to tap that are described below. The app is also set to opt out of Android's automatic app backup, so its contents are not copied to a cloud backup by the app.</p>
 
 <h2>Camera and photos</h2>
-<p>If you choose to attach a photo (for example, a picture of an insurance card or a utility shutoff), the app opens your phone's own camera or photo picker so you can take or select that photo. It is used only for that purpose. Photos are saved to your device's local storage the same way as any other information in the app — they are never uploaded or transmitted by the app.</p>
+<p>If you choose to attach a photo, the app opens your phone's own camera or photo picker so you can take or select that photo. It is used only for that purpose. Photos are saved to your device's local storage the same way as any other information in the app. They are never uploaded or transmitted by the app.</p>
 
-<h2>Location, maps, and text scanning</h2>
+<h2>Location</h2>
+<p>Bydand does not request, collect, or use your device's location. The app does not declare any location permission.</p>
+
+<h2>Links, calls, texts, and text scanning</h2>
 <p>A few features reach outside the app, and only when you tap them:</p>
 <ul>
-    <li><strong>Location permission.</strong> The app may ask for permission to use your device's location. It is used only while you are using the app, in the moment, to find nearby services, to show where you are, or to include your location in a message you choose to send. The app does not track your location in the background. Your location is not stored by us and is not sent to us.</li>
-    <li><strong>“Where am I” address lookup.</strong> When you tap it, your phone sends your current coordinates directly to the OpenStreetMap Foundation's Nominatim service, which returns a street address to show on your screen. Bydand does not receive or keep this request, and OpenStreetMap's own privacy practices apply to it.</li>
-    <li><strong>Maps and web search links.</strong> When you tap a button such as directions or “near me,” the app opens Google Maps or Google Search with the address or search term. Google's own privacy practices apply from that point.</li>
-    <li><strong>Text scanning.</strong> The first time you use the text-scanning feature (for example, to read a membership card), the app downloads a text-recognition software library, and its English language data, from a public content delivery network (such as jsDelivr), which requires an internet connection. The photo itself is read on your device and is not uploaded.</li>
+  <li><strong>Phone, text, and email.</strong> Tapping a phone, text, or email button opens your phone's own dialer, messaging, or email app. “Check In” prepares a text message in your messaging app; nothing is sent until you send it there. Those apps' own privacy practices apply.</li>
+  <li><strong>Maps, websites, and web search.</strong> Tapping a button such as a carrier's website, directions to an address you saved, or a search for a locksmith or pest control company opens your browser, Google Maps, or Google Search with that address or search term. Google's and each website's own privacy practices apply from that point.</li>
+  <li><strong>Text scanning.</strong> The first time you use the text-scanning feature (for example, to read a membership card), the app downloads a text-recognition software library, and its English language data, from a public content delivery network (such as jsDelivr), which requires an internet connection. The photo itself is read on your device and is not uploaded.</li>
 </ul>
 <p>Outside these tap-initiated features, nothing you enter or store in the app is transmitted anywhere.</p>
 
@@ -160,47 +64,36 @@
 <p>If you turn on the optional App Lock, including fingerprint or face unlock, the check is performed by your device's own security system. Bydand never receives or stores your fingerprint or face data.</p>
 
 <h2>Backups and sharing</h2>
-<p>Bydand includes an Export feature that lets you save a backup file of your information, which you can optionally protect with a passcode. This file is created and stored entirely under your control — for example, saved to your device or shared through your phone's own Share menu (such as email or text message) if you choose to send it to a family member. Bydand itself does not send this file anywhere; how and whether you share it is entirely up to you.</p>
+<p>Bydand includes an Export feature that lets you save a backup file of your information, which you can optionally protect with a passcode. You can also save your Household Contact Card as a picture, or print it. These files are created and stored entirely under your control, for example saved to your device or shared through your phone's own Share menu (such as email or text message) if you choose to send one to a family member. Bydand itself does not send these files anywhere; how and whether you share them is entirely up to you.</p>
+
+<h2>Changes from earlier versions</h2>
+<p>Earlier versions of Bydand (before version 1.4.0) included emergency, medical, and location features. Those features have been removed. When you update, the app deletes any previously saved Medical ID information from your device. If you made an Export backup with an earlier version, any medical information inside that file is ignored when you import it into the current version.</p>
 
 <h2>No ads, no analytics, no tracking</h2>
 <p>Bydand does not display advertising, does not use third-party analytics or tracking tools, and does not sell or share information with advertisers or data brokers, because it does not collect information in the first place.</p>
 
 <h2>Third parties</h2>
-<p>Bydand does not integrate with third-party services that would receive your information, other than the tap-initiated features listed under “Location, maps, and text scanning” above. Any sharing that happens (for example, sending an exported backup file by email) is initiated by you, using your device's own apps, and is governed by that app's own privacy practices rather than Bydand's.</p>
+<p>Bydand does not integrate with third-party services that would receive your information, other than the tap-initiated features listed above. Any sharing that happens (for example, sending an exported backup file by email) is initiated by you, using your device's own apps, and is governed by that app's own privacy practices rather than Bydand's.</p>
 
 <h2>Deleting your information</h2>
 <p>Because your information is stored only on your device, you can delete it at any time by removing entries inside the app, clearing the app's storage in your phone's settings, or uninstalling the app. The developer holds no copy and cannot delete anything on your behalf.</p>
 
 <h2>Children's privacy</h2>
-<p>Bydand is intended for use by adults managing household, medical, and emergency information for their family. It is not directed at children, and the app does not knowingly collect information from children, since all information is entered locally by the person using the device.</p>
+<p>Bydand is intended for use by adults managing household information for their family. It is not directed at children, and the app does not knowingly collect information from children, since all information is entered locally by the person using the device.</p>
 
-<h2>Not a substitute for emergency services</h2>
-<p>Bydand is a convenience tool intended to supplement — not replace — calling 911 or other local emergency services. In a life-threatening emergency, always contact emergency services directly.</p>
+<h2>Not an emergency service</h2>
+<p>Bydand is a personal organizer. It is not an emergency service and does not contact emergency services. In an emergency, use your phone's dialer to call 911 or your local emergency number.</p>
 
 <h2>Data loss and your responsibility</h2>
-<p>Because your information is stored only on your device and nowhere else, you are responsible for backing up your own data using the app's Export feature. If your device is lost, damaged, has its storage cleared, or the app is uninstalled without an export having been made, your information cannot be recovered — the developer has no copy of it and no way to restore it.</p>
+<p>Because your information is stored only on your device and nowhere else, you are responsible for backing up your own data using the app's Export feature. If your device is lost, damaged, has its storage cleared, or the app is uninstalled without an export having been made, your information cannot be recovered. The developer has no copy of it and no way to restore it.</p>
 
 <h2>Changes to this policy</h2>
-<p>If this privacy policy changes, the updated version will be posted at this same page with a revised "Last updated" date.</p>
+<p>If this privacy policy changes, the updated version will be posted at this same page with a revised “Last updated” date.</p>
 
 <h2>Contact</h2>
-<p>Questions about this privacy policy can be directed to: <strong>bydandapp@gmail.com</strong></p>
+<p>Questions about this privacy policy can be directed to: <a href="mailto:bydandapp@gmail.com"><strong>bydandapp@gmail.com</strong></a></p>
 
-<footer>
-    Bydand: Household &amp; Emergency
-</footer>
-
-<!-- JavaScript set to 1.4 seconds -->
-<script>
-    function hideSplash() {
-        const splash = document.getElementById('splash-screen');
-        if (splash) {
-            splash.classList.add('fade-out');
-        }
-    }
-
-    setTimeout(hideSplash, 1400);
-</script>
+<footer>Bydand: Household Contacts</footer>
 
 </body>
 </html>
