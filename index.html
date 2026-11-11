@@ -6,8 +6,8 @@
 <title>Bydand: Household Contacts — Privacy Policy</title>
 <link rel="icon" type="image/png" href="favicon-192.png">
 <style>
-  :root { color-scheme: light dark; --bg:#ffffff; --fg:#14202b; --muted:#506172; --accent:#0f766e; --rule:#d7dee6; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#0a0e15; --fg:#e8eef4; --muted:#9aa9b9; --accent:#2dd4bf; --rule:#1c2a3a; } }
+  :root { color-scheme: light dark; --bg:#ffffff; --fg:#14202b; --muted:#506172; --accent:#0f766e; --rule:#d7dee6; --splash-bg:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0a0e15; --fg:#e8eef4; --muted:#9aa9b9; --accent:#2dd4bf; --rule:#1c2a3a; --splash-bg:#0a0e15; } }
   html { background: var(--bg); }
   body { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; background: var(--bg); color: var(--fg);
          font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
@@ -20,9 +20,25 @@
   .callout { border-left: 4px solid var(--accent); padding: .6rem 1rem; margin: 1rem 0; background: color-mix(in srgb, var(--accent) 8%, transparent); }
   a { color: var(--accent); }
   footer { margin-top: 2.5rem; color: var(--muted); font-size: .9rem; }
+
+  /* Splash screen: follows the light or dark setting, fades out after 1.4 seconds */
+  #splash-screen { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: var(--splash-bg);
+                   display: flex; justify-content: center; align-items: center; z-index: 9999;
+                   transition: opacity 0.8s ease, visibility 0.8s ease; overflow: hidden; }
+  #splash-logo { width: 50vw; max-width: 192px; height: auto; object-fit: contain; border-radius: 12%;
+                 box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); animation: smoothForwardZoom 1.4s linear forwards; }
+  @keyframes smoothForwardZoom { 0% { transform: scale(0.65); opacity: 0.3; } 100% { transform: scale(1.15); opacity: 1; } }
+  #splash-screen.fade-out { opacity: 0; visibility: hidden; }
+  @media (scripting: none) { #splash-screen { display: none; } }
+  @media (prefers-reduced-motion: reduce) { #splash-logo { animation: none; } #splash-screen { transition: none; } }
 </style>
 </head>
 <body>
+
+<!-- Splash Screen Overlay -->
+<div id="splash-screen">
+  <img src="favicon-192.png" alt="Bydand logo" id="splash-logo">
+</div>
 
 <img class="logo" src="favicon-192.png" alt="Bydand logo">
 <h1>Bydand: Household Contacts — Privacy Policy</h1>
@@ -94,6 +110,13 @@
 <p>Questions about this privacy policy can be directed to: <a href="mailto:bydandapp@gmail.com"><strong>bydandapp@gmail.com</strong></a></p>
 
 <footer>Bydand: Household Contacts</footer>
+
+<script>
+  setTimeout(function () {
+    var splash = document.getElementById('splash-screen');
+    if (splash) { splash.classList.add('fade-out'); }
+  }, 1400);
+</script>
 
 </body>
 </html>
